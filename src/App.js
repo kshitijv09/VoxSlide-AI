@@ -1,6 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
 import Landing from './components/LandingPage/Landing';
+import 'bulma/css/bulma.min.css';
 function App() {
   return (
     <div className="App">

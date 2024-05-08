@@ -1,0 +1,30 @@
+.avatar-cont{
+    width:50%;
+   /*  border:pink solid 1px; */
+   /*  display: flex;
+    justify-content: center; */
+   /*  padding-left: 70px; */
+   display: flex;
+    justify-content: center;
+}
+.img{
+  /*   width:800px; */
+    height:575px;
+   /*  border:yellow solid 1px; */
+    
+}
+.img-cont{
+  opacity: 0;
+  animation: slideUp 0.5s ease-out forwards;
+  animation-delay: 2s;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(100%); /* Start from below its own height */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%); /* End at its original position */
+    opacity: 1;
+  }
+}

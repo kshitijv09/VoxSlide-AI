@@ -1,0 +1,65 @@
+.text-cont{
+    width:50;
+}
+.text-inner-cont{
+    padding-left: 100px;
+    /* border:green solid 1px; */
+    padding-top: 10px;
+}
+.bold{
+    font-size: 90px;
+    color:#ffffff;
+    word-spacing:8px;
+    letter-spacing: 2px;
+}
+.bold-cont,.small-cont{
+    vertical-align: top;
+    white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+    opacity: 0;
+    max-width: 0;
+}
+.bold-cont{
+    animation: unfoldText 1s ease forwards;
+}
+.small{
+    font-size: 20px;
+    color:#808080;
+    word-spacing:3px;
+    letter-spacing: 1px;
+}
+.small-cont{
+  animation: unfoldText 2s ease forwards;
+  animation-delay: 0.5s;
+}
+.create-btn{
+    animation: unfoldText 1s ease forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+.create-btn{
+    margin: 30px 0;
+    width:150px;
+    height:40px;
+    border-radius:20px;
+    background-color: #322831;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-right: 5px;
+    background: linear-gradient(45deg, #dc46bb, #b03fe8); 
+}
+
+
+@keyframes unfoldText {
+    0% {
+        max-width: 0;
+        opacity: 0;
+      }
+      100% {
+        max-width: 100%;
+        opacity: 1; /* Fully visible at the end of the animation */
+      }
+  }
+ 

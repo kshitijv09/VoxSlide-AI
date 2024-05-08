@@ -1,0 +1,51 @@
+.navbarr{
+    margin-top: 20px;
+    margin-left:10px;
+    /* border:green solid 1px; */
+    display: flex;
+    align-items: center;
+}
+.nav-ele-cont{
+    width:90px;
+    height:40px;
+    border-radius:20px;
+    background-color: #322831;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-right: 5px;
+    opacity:0
+}
+
+#nav-1,#nav-2,#nav-3,#nav-4,#nav-5{
+  opacity: 0;
+  animation: slideDown 0.5s ease-out forwards;
+}
+#nav-1{
+    animation-delay: 1s;
+}
+#nav-2{
+    animation-delay: 1.2s;
+}
+#nav-3{
+    animation-delay: 1.4s;
+}
+#nav-4{
+    animation-delay: 1.6s;
+}
+#nav-5{
+    animation-delay: 1.8s;
+}
+
+
+@keyframes slideDown {
+    from {
+      transform: translateY(-100%); /* Start from below its own height */
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0%); /* End at its original position */
+      opacity: 1;
+    }
+  }
+
