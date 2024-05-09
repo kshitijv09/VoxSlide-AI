@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../Navbar/Navbar'
-import Body from '../Body/Body'
-import Card from '../Card/Card'
+import Navbar from '../../components/Navbar/Navbar'
+import Body from '../../components/Body/Body'
+import Card from '../../components/Card/Card'
 import "./Landing.css"
 export default function Landing() {
   return (

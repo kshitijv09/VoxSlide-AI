@@ -1,7 +1,14 @@
 import React from 'react'
 import "./Card.css"
+import { Link ,useNavigate} from 'react-router-dom'
 import audio from "../../assets/audio.png"
 export default function Card() {
+
+  const navigate=useNavigate()
+  const routeHandler=(arg)=>{
+    navigate(arg)
+  }
+
   return (
     <div className='card-block'>
       <div className='card container'>
@@ -10,7 +17,7 @@ export default function Card() {
             <h1> Text in Minutes</h1>
             <div class="btn-cont">
             <h3>Write details of your video content</h3>
-            <button>
+            <button onClick={() => routeHandler("file")}>
               Create Video
             </button>
           </div>
@@ -22,7 +29,7 @@ export default function Card() {
             <h1> Audio in Minutes</h1>
             <div class="btn-cont" id="c-2">
             <h3>Write details of your video content</h3>
-            <button>
+            <button onClick={() => routeHandler("audio")}>
               Create Video
             </button>
           </div>
