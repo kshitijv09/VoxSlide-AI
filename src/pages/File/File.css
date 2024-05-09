@@ -1,0 +1,151 @@
+.ftv-container {
+    padding: 30px;
+    margin-top: 30px;
+   /*  border:goldenrod solid 1px; */
+  }
+  
+  .ftv-container h2 {
+    color: rgb(255 255 255);
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: -0.2px;
+    font-family: "Merriweather", serif;
+    margin-bottom:50px;
+  }
+
+
+#form-file-upload {
+    height: 367px;
+    width: 596px;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+    border-radius: 8px;
+    background: var(--Light-Gohan, #fafafb);  
+    border:green solid 1px; 
+  }
+
+  .upload-cont{
+    height:100%;
+    border:goldenrod solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #label-file-upload {
+    height: 258px;
+    /* width:564px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px dashed purple;
+    margin:10px;
+    
+  }
+  
+  #label-file-upload.drag-active {
+    background-color: #ffffff;
+  }
+  
+  .browse-link {
+    cursor: pointer;
+    color:#605BFF;
+  }
+    
+  #drag-file-element {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
+  .upload-text{
+    width:50%;
+    /* border:pink solid 2px; */
+    
+  }
+  .upload-text p{
+    color: var(--Light-Trunks, #999CA0);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* font-family: Figtree; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+  }
+  .upload-text a{
+    color: #605BFF;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Figtree;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+  }
+
+  .upload-btn{
+    display: flex;
+width:100%;
+height: 56px;
+padding: 8px 16px 8px 8px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+flex-shrink: 0;
+  }
+  .upload-btn button {
+    cursor:pointer;
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #dc46bb, #b03fe8);
+    color: white;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: 10px; /* Optionally remove button border */
+}
+
+.upload-button:focus {
+    outline: none; /* Optionally remove button outline on focus */
+}
+#disabled{
+    cursor:auto;
+    border-radius: 8px;
+    opacity: 0.4;
+    background: linear-gradient(45deg, #dc46bb, #b03fe8);
+}
+.btn-txt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-svg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+     /* Adjust spacing between the SVG and text */
+}
+.upload-svg svg{
+    margin-right: 8px;
+}
+.upload-svg p{
+    color: var(--Light-Goten, #FFF);
+font-feature-settings: 'clig' off, 'liga' off;
+/* font-family: Figtree; */
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 171.429% */
+}

@@ -1,9 +1,76 @@
-import React from 'react'
-import "./File.css"
-export default function File() {
-  return (
-    <div>
-      File
-    </div>
-  )
-}
+import React, { useState } from "react";
+import "./File.css";
+import axios from "axios";
+
+const File = () => {
+    const [videoURL, setVideoURL] = useState(null);
+    const [selectedFile, setSelectedFile] = useState(null);
+    const [isDisabled, setIsDisabled] = useState(true);
+
+    const handleFileChange = (event) => {
+        setSelectedFile(event.target.files[0]);
+        setIsDisabled(false);
+    };
+
+    const sendFileToServer = (event) => {
+        event.preventDefault();
+        if (!selectedFile) {
+            alert("Please select a file first!");
+            return;
+        }
+        const formData = new FormData();
+        formData.append('file', selectedFile);
+        
+        axios({
+            method: 'post',
+            url: 'YOUR_ENDPOINT_URL',
+            data: formData,
+            responseType: 'blob'
+        }).then(response => {
+            const videoBlob = new Blob([response.data], { type: 'video/mp4' });
+            setVideoURL(URL.createObjectURL(videoBlob));
+        }).catch(error => {
+            console.error('Error sending file to server:', error);
+        });
+        
+    };
+
+    return (
+        <div className="ftv-container">
+            <h2>Videogen.ai</h2>
+            <form id="form-file-upload" onSubmit={sendFileToServer}>
+                <div className="upload-cont">
+                    <input type="file" id="input-file-upload" multiple style={{ display: 'none' }} onChange={handleFileChange} />
+                    <label htmlFor="input-file-upload" id="label-file-upload">
+                        <div className="upload-text">
+                            <p> <a className="browse-link">Upload</a> your text file here</p>
+                        </div>
+                    </label>
+
+                    <div className="upload-btn">
+                        <button type="submit" disabled={isDisabled} id="submit-btn">
+                            <div className="btn-text">
+                                <p>Get Video</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <div className="vid-cont">
+                {videoURL && (
+                    <div className="vid-inner-cont">
+                        <video controls style={{ width: "100%", marginTop: "20px" }}>
+                            <source src={videoURL} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <a href={videoURL} download="generated_video.mp4">Download Video</a>
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+};
+
+export default File;
