@@ -22,12 +22,12 @@
     margin: auto;
     border-radius: 8px;
     background: var(--Light-Gohan, #fafafb);  
-    border:green solid 1px; 
+    /* border:green solid 1px;  */
   }
 
   .upload-cont{
     height:100%;
-    border:goldenrod solid 1px;
+   /*  border:goldenrod solid 1px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,4 +148,22 @@ font-size: 14px;
 font-style: normal;
 font-weight: 600;
 line-height: 24px; /* 171.429% */
+}
+
+.vid-cont{
+    margin:auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width:20%;
+}
+.vid-inner-cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: pink solid 1px; */
+}
+.vid-inner-cont a{
+    font-size: 20px;
+    margin-left: 20px;
 }

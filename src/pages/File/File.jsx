@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./File.css";
 import axios from "axios";
+import { Bars } from "react-loader-spinner";
 
 const File = () => {
     const [videoURL, setVideoURL] = useState(null);
     const [selectedFile, setSelectedFile] = useState(null);
     const [isDisabled, setIsDisabled] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleFileChange = (event) => {
         setSelectedFile(event.target.files[0]);
@@ -14,6 +16,7 @@ const File = () => {
 
     const sendFileToServer = (event) => {
         event.preventDefault();
+        setIsLoading(true);
         if (!selectedFile) {
             alert("Please select a file first!");
             return;
@@ -29,8 +32,10 @@ const File = () => {
         }).then(response => {
             const videoBlob = new Blob([response.data], { type: 'video/mp4' });
             setVideoURL(URL.createObjectURL(videoBlob));
+            setIsLoading(false);
         }).catch(error => {
             console.error('Error sending file to server:', error);
+            setIsLoading(false);
         });
         
     };
@@ -58,14 +63,25 @@ const File = () => {
             </form>
 
             <div className="vid-cont">
-                {videoURL && (
+                {isLoading ? (
+                    <Bars
+                    height="80"
+                    width="80"
+                    color="#C142D6"
+                    ariaLabel="bars-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                    />
+                ) : videoURL && (
                     <div className="vid-inner-cont">
                         <video controls style={{ width: "100%", marginTop: "20px" }}>
                             <source src={videoURL} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
-
-                        <a href={videoURL} download="generated_video.mp4">Download Video</a>
+                        <a href={videoURL} download="generated_video.mp4">
+                            Download Video
+                        </a>
                     </div>
                 )}
             </div>
