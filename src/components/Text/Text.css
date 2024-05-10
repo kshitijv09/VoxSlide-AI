@@ -24,6 +24,7 @@
     animation: unfoldText 1s ease forwards;
 }
 .small{
+    width:100%;
     font-size: 20px;
     color:#808080;
     word-spacing:3px;
@@ -63,3 +64,38 @@
       }
   }
  
+  /* Small devices (Tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .text-inner-cont {
+      padding-left: 50px;  /* Less padding for smaller screens */
+  }
+  .bold {
+      font-size: 50px;  /* Smaller font size for headers */
+  }
+  .small {
+      font-size: 14px;  /* Slightly smaller font size for sub-headers */
+  }
+  .create-btn {
+      width: 120px;  /* Smaller button */
+      height: 45px;  /* Smaller button */
+      flex-direction: row;
+  }
+}
+
+/* Extra small devices (Phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .text-inner-cont {
+      padding-left: 20px;  /* Even less padding for very small screens */
+  }
+  .bold {
+      font-size: 40px;  /* Further reduced font size for readability */
+  }
+  .small {
+      font-size: 10px;  /* Reduced font size to fit small screens */
+  }
+  .create-btn {
+      width: 100px;  /* Adjust button width */
+      height: 40px;  /* Adjust button height */
+      flex-direction: row;
+  }
+}

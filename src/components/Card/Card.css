@@ -118,3 +118,36 @@ background-color: #352935;
       opacity: 1;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    .card-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%; /* Full width for smaller screens */
+        padding: 10px; /* Adds some padding around the content */
+    }
+
+    .card-1, .card-2 {
+        width: 90%; /* Slightly smaller width for the card on smaller screens */
+        height: auto; /* Adjust height automatically based on content */
+        padding: 20px; /* Increase padding for better readability on small devices */
+        margin: 10px 0; /* Add some margin between cards */
+    }
+
+    .card-1 h1, .card-2 h1 {
+        font-size: 30px; /* Smaller font size for headings */
+    }
+
+    .btn-cont h3 {
+        padding:5px 10px 5px 20px;
+        font-size: 18px; /* Smaller font size for subheadings */
+    }
+
+    .btn-cont button {
+        font-size: 18px; /* Adjust button font size for better usability on small screens */
+        width:45%
+    }
+}

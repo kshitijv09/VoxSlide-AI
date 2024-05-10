@@ -28,3 +28,23 @@
     opacity: 1;
   }
 }
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .avatar-cont{
+    width:100%;
+  }
+  .img {
+    height: 430px; /* Adjust image height for smaller tablets */
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px up to 768px) */
+@media only screen and (max-width: 600px) {
+  .avatar-cont{
+    width:100%;
+  }
+  .img {
+    height: 300px; /* Adjust image height for phones */
+  }
+}

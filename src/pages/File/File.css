@@ -167,3 +167,10 @@ line-height: 24px; /* 171.429% */
     font-size: 20px;
     margin-left: 20px;
 }
+
+@media only screen and (max-width: 768px)
+{
+  /* .vid-inner-cont video{
+    display: none;
+  } */
+}

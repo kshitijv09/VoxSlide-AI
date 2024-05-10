@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./File.css";
 import axios from "axios";
 import { Bars } from "react-loader-spinner";
+import video from "../../assets/vid.mp4"
 
 const File = () => {
     const [videoURL, setVideoURL] = useState(null);
@@ -75,7 +76,7 @@ const File = () => {
                     />
                 ) : videoURL && (
                     <div className="vid-inner-cont">
-                        <video controls style={{ width: "100%", marginTop: "20px" }}>
+                        <video controls >
                             <source src={videoURL} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>

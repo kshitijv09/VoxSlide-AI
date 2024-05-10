@@ -30,7 +30,12 @@ export default function Text() {
         </h2>
         </div>
         <button className='create-btn' onClick={pathHandler}>
-            Create Video &#x2192;
+            <div>
+            Create Video
+              </div>
+              <div>
+              &#x2192;
+                </div>
         </button>
       </div>
     </div>

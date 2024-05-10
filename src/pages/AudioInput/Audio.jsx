@@ -3,6 +3,7 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 import { useState } from "react";
 import axios from 'axios';
 import { Bars } from "react-loader-spinner";
+/* import video from "../../assets/vid.mp4" */
 
 const Audio = () => {
     const [transcript, setTranscript] = useState('e.g. A polar bear hunting for fishes.');
@@ -87,7 +88,7 @@ const Audio = () => {
                     />
                 ) : videoURL && (
                     <div className="vid-inner-cont">
-                        <video controls style={{ width: "100%", marginTop: "20px" }}>
+                        <video controls >
                             <source src={videoURL} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
