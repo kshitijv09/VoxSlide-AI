@@ -3,7 +3,7 @@ from werkzeug.utils import secure_filename
 from flask_cors import CORS
 import requests
 import os
-""" from ttv import create_video_from_text """
+from ttv import create_video_from_text
 
 app = Flask(__name__)
 CORS(app)  
