@@ -10,6 +10,13 @@ load_dotenv()
 API_URL = os.getenv("API_URL")
 TOKEN=os.getenv("TOKEN")
 
+output_dir = "images"
+audio_dir = "audio"
+video_dir = "videos"
+os.makedirs(output_dir, exist_ok=True)
+os.makedirs(audio_dir, exist_ok=True)
+os.makedirs(video_dir, exist_ok=True)
+
 def create_video_from_text(file_path):
     video_clips = []
     audio_durations = []
@@ -28,8 +35,6 @@ def create_video_from_text(file_path):
             image_bytes = response.content
             if image_bytes.startswith(b'\xff\xd8'): 
                 image = Image.open(io.BytesIO(image_bytes))
-                output_dir = "images"
-                os.makedirs(output_dir, exist_ok=True)
                 image_path = os.path.join(output_dir, f"image{i}.jpg")
                 image.save(image_path)
                 print(f"Generated image saved as: {image_path}")
@@ -40,8 +45,6 @@ def create_video_from_text(file_path):
             continue 
 
         tts = gTTS(text=para, lang='en', slow=False)
-        audio_dir = "audio"
-        os.makedirs(audio_dir, exist_ok=True)
         audio_path = os.path.join(audio_dir, f"voiceover{i}.mp3")
         tts.save(audio_path)
         print(f"Paragraph converted to voiceover and saved as: audio/voiceover{i}.mp3")
@@ -49,7 +52,7 @@ def create_video_from_text(file_path):
         audio_clip = AudioFileClip(audio_path)
         audio_durations.append(audio_clip.duration)
         image_clip = ImageClip(f"images/image{i}.jpg").set_duration(audio_clip.duration)
-        text_clip = TextClip(para, fontsize=30, color="white").set_pos('bottom').set_duration(audio_clip.duration)
+        text_clip = TextClip(para, fontsize=40, color="white").set_pos((0.25,0.75),relative=True).set_duration(audio_clip.duration)
 
         clip = CompositeVideoClip([image_clip.set_audio(audio_clip), text_clip])
         video_clips.append(clip)

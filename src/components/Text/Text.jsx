@@ -1,6 +1,12 @@
 import React from 'react'
 import "./Text.css"
+import {useNavigate } from 'react-router-dom'
+
 export default function Text() {
+  const navigate=useNavigate()
+  const pathHandler=()=>{
+    navigate("/audio")
+  }
   return (
     <div className='text-cont'>
       <div className='text-inner-cont'>
@@ -12,18 +18,18 @@ export default function Text() {
             Content with AI
         </h1>
         <h1 className='bold'>
-            Video Creation
+            Clip Creation
         </h1>
         </div>
         <div className='small-cont'>
         <h2 className='small'>
-            Experience the magic of our AI Video Generator as it swiftly Selects the  
+        Your Gateway to Interactive Learning and Content Creation  
         </h2>
         <h2 className='small'>
-            Perfect Creative Media Assets for Your Video 
+            Through Voice and Vision 
         </h2>
         </div>
-        <button className='create-btn'>
+        <button className='create-btn' onClick={pathHandler}>
             Create Video &#x2192;
         </button>
       </div>

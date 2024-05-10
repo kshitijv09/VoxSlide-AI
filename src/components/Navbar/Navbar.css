@@ -1,7 +1,11 @@
 .navbarr{
     margin-top: 20px;
     margin-left:10px;
-    /* border:green solid 1px; */
+    display: flex;
+    align-items: center;
+}
+.navbar-brand{
+    margin-left: 100px;
     display: flex;
     align-items: center;
 }

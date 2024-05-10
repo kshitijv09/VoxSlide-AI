@@ -5,7 +5,7 @@ import axios from 'axios';
 import { Bars } from "react-loader-spinner";
 
 const Audio = () => {
-    const [transcript, setTranscript] = useState('');
+    const [transcript, setTranscript] = useState('e.g. A polar bear hunting for fishes.');
     const [punctuatedTranscript, setPunctuatedTranscript] = useState('');
     const [fileURL, setFileURL] = useState(null);
     const [videoURL, setVideoURL] = useState(null);
@@ -65,7 +65,7 @@ const Audio = () => {
 
     return (
         <div className="atv-container">
-            <h2>Videogen.ai</h2>
+            <h2>VoxSlide.ai</h2>
             <div className="main-content">
                 {punctuatedTranscript || transcript || liveTranscript}
             </div>

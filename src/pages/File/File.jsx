@@ -26,7 +26,7 @@ const File = () => {
         
         axios({
             method: 'post',
-            url: 'YOUR_ENDPOINT_URL',
+            url: 'http://localhost:5000/upload',
             data: formData,
             responseType: 'blob'
         }).then(response => {
@@ -42,7 +42,7 @@ const File = () => {
 
     return (
         <div className="ftv-container">
-            <h2>Videogen.ai</h2>
+            <h2>Voxslide.ai</h2>
             <form id="form-file-upload" onSubmit={sendFileToServer}>
                 <div className="upload-cont">
                     <input type="file" id="input-file-upload" multiple style={{ display: 'none' }} onChange={handleFileChange} />
