@@ -38,7 +38,7 @@ To run VoxSlide-AI on your local machine, follow these steps:
 5. Get the Hugging Face Text to Image Model API link and token from [Hugging Face](https://huggingface.co/models) and put them in the .env file.
 6. Run the Flask server using uvicorn
    ```bash
-     uvicorn app:app
+     gunicorn -b 0.0.0.0:5000 app:app
 7. Navigate out of the server folder
    ```bash
      cd ..
