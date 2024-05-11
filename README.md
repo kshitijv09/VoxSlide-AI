@@ -2,11 +2,17 @@
 
 VoxSlide-AI is a versatile tool designed to empower users to create short audio-visual clips effortlessly, either based on text files or by recording audio. With its intuitive interface and powerful features, VoxSlide-AI opens up a world of possibilities for content creators, educators, and anyone looking to add a dynamic touch to their presentations or social media content.
 
+## Demo Video
+
+https://github.com/kshitijv09/vidgen.ai/assets/98077136/07312f00-2934-49ee-a51b-66eedfaf82d8
+
+
 ## Features
 
 - **Text-to-Video Conversion**: Convert text files into engaging audio-visual clips with ease.
 - **Audio Recording**: Record audio directly within the application and transform it into captivating visuals.
 - **Flexible Export**: Download video clips in popular formats for easy sharing on social media platforms or integration into presentations.
+- **Subtitles & Audio Voiceover**: Generated video will have English subtitles as well as voiceover for interactive content
 
 ## Use Cases
 
