@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# VoxSlide-AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+VoxSlide-AI is a versatile tool designed to empower users to create short audio-visual clips effortlessly, either based on text files or by recording audio. With its intuitive interface and powerful features, VoxSlide-AI opens up a world of possibilities for content creators, educators, and anyone looking to add a dynamic touch to their presentations or social media content.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Text-to-Video Conversion**: Convert text files into engaging audio-visual clips with ease.
+- **Audio Recording**: Record audio directly within the application and transform it into captivating visuals.
+- **Flexible Export**: Download video clips in popular formats for easy sharing on social media platforms or integration into presentations.
 
-### `npm start`
+## Use Cases
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Content Creation**: VoxSlide-AI simplifies the process of creating engaging content for social media platforms, blogs, or websites.
+- **Educational Videos**: Teachers and educators can use VoxSlide-AI to create interactive and visually appealing educational videos to enhance learning experiences.
+- **Presentation Enhancement**: Add a dynamic element to presentations by converting text or audio content into visually compelling video clips.
+- **Promotional Material**: Businesses and marketers can leverage VoxSlide-AI to create simple and interactive content that stands out.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **FrontEnd**: React, react-speech-recognition, Bulma(CSS library).
+- **BackEnd**: Flask, Moviepy (Video Editing and Manipulation), ImageMagick (Image Processing)
+- **ML Model**: Hugging Face's text-to-image model is utilized for generating images based on input text -  huggingface.co/stabilityai/stable-diffusion-xl-base-1.0
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to Run VoxSlide-AI
 
-### `npm run build`
+To run VoxSlide-AI on your local machine, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository from GitHub:
+   ```bash
+   git clone https://github.com/your-username/VoxSlide-AI.git
+2. Navigate into the server directory
+   ```bash
+    cd VoxSlide-AI/server
+3. Install the server dependencies
+   ```bash
+   pip install -r requirements.txt
+4. Install ImageMagick on your local machine.
+5. Get the Hugging Face Text to Image Model API link and token from [Hugging Face](https://huggingface.co/models) and put them in the .env file.
+6. Run the Flask server using uvicorn
+   ```bash
+     uvicorn app:app
+7. Navigate out of the server folder
+   ```bash
+     cd ..
+8. Install the frontend dependencies
+    ```bash
+     npm install
+9. Start the client server
+    ```bash
+     npm start
+10.  Access VoxSlide-AI in your web browser at http://localhost:3000. The server runs on port 5000.   
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
