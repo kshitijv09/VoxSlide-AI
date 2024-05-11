@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">  
-      <a role="button" class="navbar-burger is-hoverable" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <a role="button" class="navbar-burger " aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -13,8 +13,14 @@ export default function Navbar() {
       </a>
     </div>
   
-    <div id="navbarBasicExample" class="navbar-menu is-hoverable navbarr" >
+    <div id="navbarBasicExample" class="navbar-menu  navbarr" >
     <div class="navbar-start">
+      <button className='nav-ele-cont' id="nav-0">
+        <a class="navbar-item">
+        VoxSlide.ai
+        </a>
+      </button>
+
       <button className='nav-ele-cont' id="nav-1">
         <a class="navbar-item">
         Features

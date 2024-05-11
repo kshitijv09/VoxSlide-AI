@@ -11,7 +11,7 @@ export default function Card() {
 
   return (
     <div className='card-block'>
-      <div className='card container'>
+      <div className='card-container'>
         <div className='card-1'>
             <h1> Create Clips From</h1>
             <h1> Text in Minutes</h1>
@@ -23,7 +23,7 @@ export default function Card() {
           </div>
         </div>
       </div>
-      <div className='card container'>
+      <div className='card-container'>
         <div className='card-2'>
         <h1> Create Clips From</h1>
             <h1> Audio in Minutes</h1>

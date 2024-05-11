@@ -27,7 +27,7 @@ const File = () => {
         
         axios({
             method: 'post',
-            url: 'http://localhost:5000/upload',
+            url: 'https://ttv-server.onrender.com/upload',
             data: formData,
             responseType: 'blob'
         }).then(response => {
