@@ -3,7 +3,6 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 import { useState } from "react";
 import axios from 'axios';
 import { Bars } from "react-loader-spinner";
-/* import video from "../../assets/vid.mp4" */
 
 const Audio = () => {
     const [transcript, setTranscript] = useState('e.g. A polar bear hunting for fishes.');

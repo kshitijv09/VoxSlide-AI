@@ -36,7 +36,7 @@ To run VoxSlide-AI on your local machine, follow these steps:
    pip install -r requirements.txt
 4. Install ImageMagick on your local machine.
 5. Get the Hugging Face Text to Image Model API link and token from [Hugging Face](https://huggingface.co/models) and put them in the .env file.
-6. Run the Flask server using uvicorn
+6. Run the Flask server
    ```bash
      python3 app.py
 7. Navigate out of the server folder

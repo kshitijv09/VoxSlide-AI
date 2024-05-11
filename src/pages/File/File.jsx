@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./File.css";
 import axios from "axios";
 import { Bars } from "react-loader-spinner";
-import video from "../../assets/vid.mp4"
 
 const File = () => {
     const [videoURL, setVideoURL] = useState(null);
@@ -27,7 +26,7 @@ const File = () => {
         
         axios({
             method: 'post',
-            url: 'https://ttv-server.onrender.com/upload',
+            url: 'http://localhost:5000/upload',
             data: formData,
             responseType: 'blob'
         }).then(response => {
